@@ -2,7 +2,7 @@
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
-import Announcement from '~/components/widgets/Announcement.astro';
+import NavBanner from '~/components/widgets/NavBanner.astro';
 
 import { headerData, footerData } from '~/navigation';
 
@@ -10,19 +10,31 @@ import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  frontmatter?: {
+    title?: string;
+  };
 }
 
-const { metadata } = Astro.props;
+const { metadata: meta, frontmatter: front } = Astro.props;
+
+let title: string | undefined = undefined;
+if (meta?.title) {
+  title = meta.title;
+} else if (front?.title) {
+  title = front.title
+}
+
+const metadata: MetaData = { title };
 ---
 
 <Layout metadata={metadata}>
   <slot name="announcement">
-    <Announcement />
+    <NavBanner/>
   </slot>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header {...headerData} socialLinks={footerData.socialLinks} isSticky showRssFeed showToggleTheme />
   </slot>
-  <main>
+  <main class="2xl:font-[20px]">
     <slot />
   </main>
   <slot name="footer">

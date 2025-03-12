@@ -1,183 +1,125 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Homes',
-      links: [
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
-      ],
+      text: 'Features',
+      href: '/#/features'
     },
     {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Services',
-          href: getPermalink('/services'),
-        },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
+      text: 'Funding',
+      href: '/#/funding'
     },
     {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
+      text: 'News',
+      href: '/news'
     },
     {
-      text: 'Blog',
+      text: 'Learn',
       links: [
         {
-          text: 'Blog List',
-          href: getBlogPermalink(),
+          text: 'Quickstart',
+          href: 'https://library.qiime2.org/quickstart',
+          external: true
         },
         {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          text: 'Tutorials',
+          href: 'https://library.qiime2.org/books',
+          external: true
         },
         {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          text: 'Using QIIME 2',
+          href: 'https://use.qiime2.org',
+          external: true
         },
         {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
+          text: 'Developing with QIIME 2',
+          href: 'https://develop.qiime2.org',
+          external: true
+        }
+      ]
     },
     {
-      text: 'Widgets',
-      href: '#',
-    },
+      text: 'Community',
+      links: [
+        {
+          text: 'Getting Involved',
+          href: 'https://use.qiime2.org/en/latest/how-to-guides/get-involved.html',
+          external: true,
+        },
+        {
+          text: 'Forum',
+          href: 'https://forum.qiime2.org',
+          external: true,
+        },
+        {
+          text: 'Library',
+          href: 'https://library.qiime2.org',
+          external: true,
+        },
+      ]
+    }
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [
+    { text: 'Quickstart', variant: 'primary',  href: 'https://library.qiime2.org/quickstart', target: '_blank' }],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'QIIME 2',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Library', href: 'https://library.qiime2.org' },
+        { text: 'View', href: 'https://view.qiime2.org' },
+        { text: 'Forum', href: 'https://forum.qiime2.org' },
+        { text: 'Paper', href: 'https://www.nature.com/articles/s41587-019-0209-9' },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Library',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Books', href: 'https://library.qiime2.org/books' },
+        { text: 'Videos', href: 'https://library.qiime2.org/videos' },
+        { text: 'Data Resources', href: 'https://library.qiime2.org/data-resources' },
+        { text: 'Base Distributions', href: 'https://library.qiime2.org/quickstart' },
+        { text: 'Available Plugins', href: 'https://library.qiime2.org/plugins' },
+        { text: '(old user docs)', href: 'https://docs.qiime2.org/2024.10/' },
       ],
     },
     {
-      title: 'Support',
+      title: 'Forum',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Announcements', href: 'https://forum.qiime2.org/c/announcements/8' },
+        { text: 'User Support', href: 'https://forum.qiime2.org/c/user-support/6' },
+        { text: 'Library Plugin Support', href: 'https://forum.qiime2.org/c/community-plugin-support/24' },
+        { text: 'General Discussion', href: 'https://forum.qiime2.org/c/general-discussion/23' },
+        { text: 'Developer Discussion', href: 'https://forum.qiime2.org/c/dev-discussion/7' },
+        { text: 'Community Contributions', href: 'https://forum.qiime2.org/c/community-contributions/15' },
       ],
     },
     {
-      title: 'Company',
+      title: 'For Developers',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Developing with QIIME 2', href: 'https://develop.qiime2.org/en/latest/' },
+        { text: 'Building a QIIME 2 Plugin', href: 'https://develop.qiime2.org/en/latest/plugins/tutorials/intro.html' },
+        { text: 'Plugin API', href: 'https://develop.qiime2.org/en/latest/plugins/references/api/intro.html' },
+        { text: 'Python SDK', href: 'https://develop.qiime2.org/en/latest/interfaces/references/api.html' },
+        { text: 'QZA Internals', href: 'https://develop.qiime2.org/en/latest/framework/explanations/archives.html' },
+        { text: 'QIIME 2 GitHub', href: 'https://github.com/qiime2' },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Software License', href: 'https://github.com/qiime2/qiime2/blob/dev/LICENSE' },
+    { text: 'Contributing', href: 'https://github.com/qiime2/.github/blob/main/CONTRIBUTING.md' },
+    { text: 'Code of Conduct', href: 'https://github.com/qiime2/.github/blob/main/CODE-OF-CONDUCT.md' },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/qiime2' },
+    { ariaLabel: 'Bluesky', icon: 'tabler:brand-bluesky', href: 'https://bsky.app/profile/qiime2.org' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    Original <a class='underline' href="https://github.com/onwidget/astrowind">template</a> by <a class="underline" href="https://onwidget.com/" target="_blank" rel="noopener noreferrer"> onWidget</a> · All rights reserved.
   `,
 };

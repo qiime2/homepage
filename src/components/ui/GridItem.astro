@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon/components';
+import { twMerge } from "tailwind-merge";
+import Button from './Button.astro';
+
+let {
+    icon = '',
+    title = '',
+    callToAction = null,
+
+    panelClass,
+    iconClass = 'text-primary',
+    titleClass,
+    descriptionClass,
+    actionClass,
+} = Astro.props;
+---
+<div class="intersect-once  ">
+    <div class={twMerge('flex flex-row max-w-md', panelClass)}>
+    <div class="flex justify-center">
+        {icon && (
+        <Icon
+            name={icon}
+            class={twMerge('w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2', iconClass)}
+        />
+        )}
+    </div>
+    <div class="mt-0.5">
+        {title && <h3 class={twMerge('text-xl font-bold', titleClass)}>{title}</h3>}
+        <div class={twMerge('', descriptionClass)}>
+            <slot />
+        </div>
+        {callToAction && (
+        <div class={twMerge('mt-3', actionClass)}>
+            <Button variant="link" {...callToAction} />
+        </div>
+        )}
+    </div>
+    </div>
+</div>

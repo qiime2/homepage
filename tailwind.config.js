@@ -6,6 +6,15 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,json,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: "var(--color-blue-700)",
+            },
+          }
+        }
+      }),
       colors: {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',
@@ -20,7 +29,7 @@ export default {
       },
 
       animation: {
-        fade: 'fadeInUp 1s both',
+        fade: 'fadeInUp 0s both',
       },
 
       keyframes: {

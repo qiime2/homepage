@@ -1,0 +1,186 @@
+---
+layout: ~/layouts/PageLayout.astro
+title: 'QIIME 2 Homepage'
+---
+import Text from '~/components/widgets/Text.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import FeatureItem from '~/components/widgets/FeatureItem.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQSection from '~/components/widgets/FAQSection.astro';
+import FAQItem from '~/components/widgets/FAQItem.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getCollection } from 'astro:content';
+
+export const distros = (await getCollection('distros')).map(({ data }) => (data));
+
+
+export {/*
+An explanation of what is happening in this file and where things live.
+
+This is an MDX file. It's markdown with a bit of JSX syntax, you may wish to
+install a language pack for it for your editor. That's also why there's a weird
+export statement in front of this comment.
+
+The rest of this is Astro.
+
+"Dynamic" data is sourced from collection loaders in:
+  - src/content/config.ts
+    (This is where forum posts and distros are coming from.)
+
+URLs and Navigation should stay largely here:
+  - src/navigation.ts
+
+Config for the theme is here:
+  - src/config.yaml
+
+Colors live here:
+  - src/components/CustomStyles.astro
+
+The rest is pretty standard looking.
+
+*/}
+
+
+<Hero
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Quick Start',
+      href: 'https://library.qiime2.org/quickstart',
+      target: '_blank',
+      icon: 'tabler:arrow-forward',
+    },
+    { text: 'Learn more', href: '/#/features' },
+  ]}
+>
+  <Fragment slot="title">
+
+QIIME 2 is a **multi-omics** and AI-ready **data science** platform for bioinformatics
+
+  </Fragment>
+  <Fragment slot="subtitle">
+
+QIIME 2 is [trusted](https://scholar.google.com/scholar?hl=en&as_sdt=805&sciodt=0,3&cites=6935821321202015575,17795719731389093288,9078996940723452772,6129633569390757233,261340794755367594,16903127068530972426&scipsc=&q=&scisbd=1_),
+[free](https://github.com/qiime2/qiime2/blob/dev/LICENSE),
+[open source](https://github.com/qiime2),
+[extensible](https://develop.qiime2.org),
+and [community developed](https://library.qiime2.org)
+and [supported](https://forum.qiime2.org/g/q2-mods).
+
+  </Fragment>
+</Hero>
+
+
+<Stats
+  stats={[
+    {
+      title: 'Citations',
+      amount: '50K+',
+      href: 'https://scholar.google.com/scholar?hl=en&as_sdt=805&sciodt=0,3&cites=6935821321202015575,17795719731389093288,9078996940723452772,6129633569390757233,261340794755367594,16903127068530972426&scipsc=&q=&scisbd=1_'
+    },
+    {
+      title: 'Forum Users',
+      amount: '8K+',
+      href: 'https://forum.qiime2.org'
+    },
+    {
+      title: 'Patent Applications',
+      amount: '2K+',
+      href: 'https://www.lens.org/lens/search/patent/list?q=qiime%20OR%20qiime2&p=0&n=10&s=_score&d=%2B&f=false&e=false&l=en&authorField=author&dateFilterField=publishedDate&orderBy=%2B_score&presentation=false&preview=true&stemmed=true&useAuthorId=false'
+    },
+    {
+      title: 'Clinical Trials',
+      amount: '50+',
+      href: 'https://clinicaltrials.gov/search?term=qiime%20OR%20qiime2'
+    },
+  ]}
+/>
+
+
+<Features
+  id="/features"
+  tagline="Features"
+  title="Our users love these features"
+  subtitle="The latest methods, ">
+
+  <FeatureItem title='Latest Methods' icon='tabler:microscope'>
+Across dozens of plugins and hundreds of different bioinformatic methods and interactive visualizations.
+  </FeatureItem>
+
+  <FeatureItem title='Automated Provenance' icon='tabler:history'>
+What steps, parameters, and environments used are automatically tracked with decentralized data provenance.
+It follows your analysis and is embedded into your data and visualizations.
+  </FeatureItem>
+
+  <FeatureItem title='Multiple Interfaces' icon='tabler:stack-2'>
+No matter your computational expertise, QIIME 2 provides the same functionality through
+multiple different interfaces to target different platforms and experience levels.
+  </FeatureItem>
+
+  <FeatureItem title='Extensible' icon='tabler:hexagon-plus'>
+QIIME 2 uses a plugin architecture to define the available methods and visualizations.
+This makes it simple to extend and modify to suite your immediate needs and allows you to rely on a
+large library of existing functionality.
+  </FeatureItem>
+
+  <FeatureItem title='Accessible' icon='tabler:book-2'>
+We focus on simplifying workflows and creating highly accessible documentation to empower everyone from students to professionals.
+  </FeatureItem>
+
+  <FeatureItem title='Open Source Community' icon='tabler:users'>
+TBD
+  </FeatureItem>
+</Features>
+
+<Features2
+    tagline="Distributions"
+    title="Multi-Omics"
+    subtitle="QIIME 2 supports multiple different -omics through specialized distributions."
+    items={distros}>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features2>
+
+
+<FAQSection
+    tagline="FAQs"
+    title="Frequently Asked Questions"
+    subtitle=""
+    classes={{ container: 'max-width' }}>
+
+  <FAQItem title='Some Question'>
+Some **markdown** answer.
+  </FAQItem>
+
+  <FAQItem title='How to install the Astro + Tailwind CSS template?'>
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.
+  </FAQItem>
+
+</FAQSection>
+
+
+<Text id='/funding' title='QIIME 2 is supported by' tagline='funding'>
+QIIME 2 is funded in part by NIH National Cancer Institute Informatics Technology for Cancer Research grant [1U24CA248454-01](https://reporter.nih.gov/project-details/9951750),
+and by grant [DAF2019-207342](https://doi.org/10.37921/862772dbrrej) from the Chan Zuckerberg Initiative (CZI) DAF,
+an advised fund of Silicon Valley Community Foundation (CZI grant DOI: 10.37921/862772dbrrej; funder DOI 10.13039/100014989).
+
+Documentation is built with MyST Markdown,
+which is supported in part with [funding](https://sloan.org/grant-detail/6620) from the Alfred P. Sloan Foundation.
+
+Initial support for the development of QIIME 2 was provided
+through a [grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1565100) from the National Science Foundation.
+
+</Text>
+
+
+
+<BlogLatestPosts id="/news" title="Latest News & Updates">
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</BlogLatestPosts>

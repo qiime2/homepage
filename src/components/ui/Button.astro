@@ -29,7 +29,7 @@ const variants = {
     </button>
   ) : (
     <a
-      class={twMerge(variants[variant] || '', className)}
+      class={twMerge(variants[variant] || '', 'flex items-center', className)}
       {...(target ? { target: target, rel: 'noopener noreferrer' } : {})}
       {...rest}
     >

@@ -3,6 +3,7 @@ import { getRssString } from '@astrojs/rss';
 import { SITE, METADATA, APP_BLOG } from 'astrowind:config';
 import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
+import stylesheet from '../assets/rss-style.xsl';
 
 export const GET = async () => {
   if (!APP_BLOG.isEnabled) {
@@ -18,6 +19,7 @@ export const GET = async () => {
     title: `${SITE.name}’s Blog`,
     description: METADATA?.description || '',
     site: import.meta.env.SITE,
+    stylesheet,
 
     items: posts.map((post) => ({
       link: getPermalink(post.permalink, 'post'),
