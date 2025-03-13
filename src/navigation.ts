@@ -125,6 +125,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    Original <a class='underline' href="https://github.com/onwidget/astrowind">template</a> by <a class="underline" href="https://onwidget.com/" target="_blank" rel="noopener noreferrer"> onWidget</a> · All rights reserved.
+    Original <a class='underline' href="https://github.com/onwidget/astrowind">template</a> by <a class="underline" href="https://onwidget.com/" target="_blank" rel="noopener noreferrer"> onWidget</a> · This site is maintained by the [Caporaso Lab](https://cap-lab.bio). · Content licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
   `,
 };
