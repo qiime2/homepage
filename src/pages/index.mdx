@@ -179,6 +179,14 @@ To build and distribute your own plugins, see [*Developing with QIIME 2*](https:
 As of March 2025, we're doing an extensive re-write of our documentation using [JupyterBook](https://jupyterbook.org/en/stable/intro.html) and [Diátaxis](https://diataxis.fr/) to modernize it and to improve organization and accessibility.
   </FAQItem>
 
+  <FAQItem title='Framework? Distributions? Plugins? Huh?'>
+We know it's a little confusing, and we're working on clarifying. 🌳
+
+Briefly, *plugins* provide all analytic functionality.
+Groups of plugins that are intended to be used together are shared as *distributions*.
+The *QIIME 2 Framework (Q2F)* provides the general purpose biological data science functionality, like data provenance tracking, and serves as the glue between plugins and the interfaces.
+  </FAQItem>
+
   <FAQItem title='What the heck is a .qza (or .qzv) file?'>
 They're literally just .zip files, with a different file extension that means *QIIME Zipped Artifact* or *QIIME Zipped Visualization*.
 You can open them with any unzip utility, such as `unzip` or 7zip.
@@ -201,14 +209,6 @@ We are now working on functionality that allows users to sign and add a license 
 
 Garbage In, Garbage Out.
 Artifacts In, Actual Intelligence Out.
-  </FAQItem>
-
-  <FAQItem title='Framework? Distributions? Plugins? Huh?'>
-We know it's a little confusing, and we're working on clarifying. 🌳
-
-Briefly, *plugins* provide all analytic functionality.
-Groups of plugins that are intended to be used together are shared as *distributions*.
-The *QIIME 2 Framework (Q2F)* provides the general purpose biological data science functionality, like data provenance tracking, and serves as the glue between plugins and the interfaces.
   </FAQItem>
 
   <FAQItem title='Where can I find more QIIME 2 plugins?'>
