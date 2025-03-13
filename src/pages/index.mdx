@@ -105,7 +105,7 @@ and [supported](https://forum.qiime2.org/g/q2-mods).
   id="/features"
   tagline="Features"
   title="Our users love these features"
-  subtitle="We empower researchers to conduct reproducible microbiome analysis through a variety of interfaces and using diverse methods.">
+  subtitle="The QIIME 2 Framework (Q2F) empowers researchers to conduct reproducible biological data science through a variety of interfaces and using diverse methods.">
 
   <FeatureItem title='Latest Methods' icon='tabler:microscope'>
 QIIME 2 integrates dozens of plugins and hundreds of bioinformatics methods, allowing users to perform cutting-edge microbiome analysis with interactive visualizations and robust statistical tools.
@@ -117,29 +117,32 @@ This ensures full transparency and reproducibility, embedding provenance directl
   </FeatureItem>
 
   <FeatureItem title='Multiple Interfaces' icon='tabler:stack-2'>
-QIIME 2 is designed for users of all experience levels by offering multiple interfaces:
-
-Python 3 API and R API for programmatic access, Command Line Interface (CLI) for efficient scripting, and a
-Graphical Interface via Galaxy for an intuitive, visual experience.
+All analytic functionality is available through multiple interfaces: Python 3 and R APIs for programmatic access; a command line interface (CLI) for efficient scripting, and a graphical interface (GUI) via Galaxy for an intuitive, visual experience.
+Regardless of your computational background, QIIME 2 has an interface that will enable you to work efficiently!
   </FeatureItem>
 
   <FeatureItem title='Extensible' icon='tabler:hexagon-plus'>
-QIIME 2's plugin-based framework makes it easy to extend and customize the platform. Users can integrate new bioinformatics tools while leveraging an extensive library of existing functionality.
+Q2F is plugin-based, making it straight-forward to extend and customize the platform.
+Developers can integrate their bioinformatics methods, leveraging an extensive library of existing functionality and leaving the interfaces and provenance recording to the framework.
   </FeatureItem>
 
   <FeatureItem title='Accessible' icon='tabler:book-2'>
-QIIME 2 is designed to be accessible to all users, from students to seasoned researchers. It provides simplified workflows, comprehensive tutorials, and clear documentation to streamline microbiome analysis. Visit the [QIIME 2 Library](https://library.qiime2.org) for guides, tutorials, and reference materials.
+QIIME 2 is designed to be accessible to all users, from students to seasoned researchers.
+It provides simplified workflows, comprehensive tutorials, and clear documentation to streamline microbiome analysis.
+Visit the [QIIME 2 Library](https://library.qiime2.org) for guides, tutorials, and reference materials.
   </FeatureItem>
 
   <FeatureItem title='Open Source Community' icon='tabler:users'>
-QIIME 2 thrives on its open-source community, which are responsible for its growth and improvement. The [QIIME 2 Forum](https://forum.qiime2.org) serves as a central hub for discussions, troubleshooting, and collaboration. Users are encouraged to engage, share insights, and follow the project's [code of conduct](https://github.com/qiime2/.github/blob/main/CODE-OF-CONDUCT.md).
+QIIME 2 thrives on its open-source community, which is responsible for its growth and improvement.
+The [QIIME 2 Forum](https://forum.qiime2.org) is the hub of the community, and serves as a free resource for discussions, troubleshooting, and collaboration.
+Users are encouraged to engage, share insights, and follow the project's [code of conduct](https://github.com/qiime2/.github/blob/main/CODE-OF-CONDUCT.md).
   </FeatureItem>
 </Features>
 
 <Features2
     tagline="Distributions"
     title="Multi-Omics"
-    subtitle="QIIME 2 supports multiple different -omics through specialized distributions."
+    subtitle="The QIIME 2 Framework supports expanding -omics data types through specialized distributions."
     items={distros}>
   <Fragment slot="bg">
     <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -154,35 +157,43 @@ QIIME 2 thrives on its open-source community, which are responsible for its grow
     classes={{ container: '' }}>
 
   <FAQItem title='How do I pronounce QIIME 2?'>
-QIIME 2 (pronounced "chime two") is a microbiome multi-omics bioinformatics and data science platform that is free, open source, extensible, and community-developed. It enables researchers to conduct reproducible microbiome analysis with a variety of interfaces and tools.
+QIIME 2 is pronounced "chime two". 🔔
   </FAQItem>
 
   <FAQItem title='Is QIIME 2 free to use?'>
-Yes! QIIME 2 is completely free and open source, meaning anyone can use, modify, and contribute to its development under our [BSD 3-Clause License](https://github.com/qiime2/qiime2/blob/dev/LICENSE).
+Yes!
+QIIME 2 is completely free and open source, meaning anyone can use, modify, and contribute to its development under our [BSD 3-Clause License](https://github.com/qiime2/qiime2/blob/dev/LICENSE).
+That includes commercial use.
   </FAQItem>
 
   <FAQItem title='How do I start using QIIME 2?'>
-* If you have QIIME 2 results and want to interact with them without installation, use [QIIME 2 View](https://view.qiime2.org).
+* If you have QIIME 2 results and want to interact with them without installing QIIME 2, use [QIIME 2 View](https://view.qiime2.org).
 * If you want to install and use QIIME 2 on your own system, follow the [installation guide](https://docs.qiime2.org/2024.10/install/).
 
-Comprehensive [user documentation](https://docs.qiime2.org) is available, including tutorials and reference materials. The documentation is being updated using [JupyterBook](https://jupyterbook.org/en/stable/intro.html) and [Diátaxis](https://diataxis.fr/) to improve organization and accessibility.
+To learn marker gene (i.e., amplicon) analysis with QIIME 2, see the [amplicon docs](https://amplicon-docs.readthedocs.io).
+To learn metagenome (i.e., shotgun) analysis with QIIME 2, see the [MOSHPIT docs](https://moshpit-docs.readthedocs.io).
+To learn advanced techniques for working with the QIIME 2 Framework, see [*Using QIIME 2*](https://use.qiime2.org).
+As of March 2025, we're doing an extensive re-write of our documentation using [JupyterBook](https://jupyterbook.org/en/stable/intro.html) and [Diátaxis](https://diataxis.fr/) to modernize it and to improve organization and accessibility.
   </FAQItem>
 
-  <FAQItem title='What interfaces does QIIME 2 offer?'>
-* **Python 3 API** and **R API** for data scientists and developers.
-* **Command Line Interface (CLI)** for those comfortable with terminal commands.
-* **Graphical Interface via Galaxy** (e.g., at [Galaxy Cancer](https://cancer.usegalaxy.org)) for users preferring a visual approach.
+  <FAQItem title='What the heck is a `.qza` (or `.qzv`) file?'>
+They're literally just `.zip` files, with a different file extension (try unzipping one with any unzip utility).
 
-Each QIIME 2 interface provides the same functionality, but is targetted for different use-cases and user-groups.
+The contain your data in the normal formats (`.fastq.gz`, `.fasta`, `.biom`, ...), alongside some QIIME 2 specific metadata, like your data's provenance.
+We call these "archives", and you can learn about the archive format [here](https://develop.qiime2.org/en/latest/framework/references/archive-versions.html).
   </FAQItem>
 
-  <FAQItem title='How can I get help or connect with the QIIME 2 community?'>
-The [QIIME 2 Forum](https://forum.qiime2.org) is the primary resource for support and community interaction. Users can find announcements, job postings, and technical assistance from a vibrant and active microbiome data science community.
+  <FAQItem title='How can I get help or become involved with the QIIME 2 community?'>
+The [QIIME 2 Forum](https://forum.qiime2.org) is the primary resource for support and community interaction.
+There you can find announcements, job postings, and technical assistance from a vibrant and active microbiome data science community.
+If you're not a developer and want to get involved in the project, see [*How to get Involved in the QIIME 2 Community*](https://use.qiime2.org/en/latest/how-to-guides/get-involved.html).
+If you are a developer and want to get involved in the project, see [our *Contributing Guide*](https://github.com/qiime2/.github/blob/main/CONTRIBUTING.md)
   </FAQItem>
 
+  <FAQItem title='What do you mean by "AI-Ready"?'>
+We mean that you'll always know how the data you're working with was generated (because of Q2F's data provenance recording), and that the QIIME 2 steps that were performed make logical sense (because of Q2F's Artifact Class system).
 
-  <FAQItem title='What makes QIIME 2 suitable for reproducible research?'>
-QIIME 2 automatically tracks the steps taken during analysis, using a process we call decentralized data provenance. Users can view the provenance for any result using QIIME 2 View or Provenance Replay.
+Garbage In, Garbage Out. Artifacts In, Actual Intelligence Out.™️
   </FAQItem>
 
   <FAQItem title='Can I develop my own QIIME 2 plugins?'>
