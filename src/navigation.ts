@@ -57,6 +57,11 @@ export const headerData = {
           href: 'https://library.qiime2.org',
           external: true,
         },
+        {
+          text: 'Code of Conduct',
+          href: 'https://github.com/qiime2/.github/blob/main/CODE-OF-CONDUCT.md',
+          external: true,
+        },
       ]
     }
   ],
