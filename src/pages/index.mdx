@@ -113,7 +113,8 @@ QIIME 2 integrates dozens of plugins and hundreds of bioinformatics methods, all
 
   <FeatureItem title='Automated Provenance Recording' icon='tabler:history'>
 All commands, parameters, and computational environments used during analysis are automatically recorded with decentralized data provenance.
-This ensures full transparency and reproducibility, embedding provenance directly into your data and visualizations.
+This ensures full transparency and reproducibility.
+With data provenance embedded as metadata in your data and visualizations, your data won't become disconnected from the details of how it was created.
   </FeatureItem>
 
   <FeatureItem title='Multiple Interfaces' icon='tabler:stack-2'>
@@ -133,9 +134,10 @@ Visit the [QIIME 2 Library](https://library.qiime2.org) for guides, tutorials, a
   </FeatureItem>
 
   <FeatureItem title='Open Source Community' icon='tabler:users'>
-QIIME 2 thrives on its open-source community, which is responsible for its growth and improvement.
+QIIME 2 thrives because of its community, which drives the direction of the project.
 The [QIIME 2 Forum](https://forum.qiime2.org) is the hub of the community, and serves as a free resource for discussions, troubleshooting, and collaboration.
-Users are encouraged to engage, share insights, and follow the project's [code of conduct](https://github.com/qiime2/.github/blob/main/CODE-OF-CONDUCT.md).
+Users are encouraged to engage and share their insights.
+You can learn about our expectations of community members in the [code of conduct](https://github.com/qiime2/.github/blob/main/CODE-OF-CONDUCT.md).
   </FeatureItem>
 </Features>
 
@@ -176,22 +178,25 @@ To learn advanced techniques for working with the QIIME 2 Framework, see [*Using
 As of March 2025, we're doing an extensive re-write of our documentation using [JupyterBook](https://jupyterbook.org/en/stable/intro.html) and [Diátaxis](https://diataxis.fr/) to modernize it and to improve organization and accessibility.
   </FAQItem>
 
-  <FAQItem title='What the heck is a `.qza` (or `.qzv`) file?'>
-They're literally just `.zip` files, with a different file extension (try unzipping one with any unzip utility).
+  <FAQItem title='What the heck is a .qza (or .qzv) file?'>
+They're literally just .zip files, with a different file extension that means *QIIME Zipped Artifact* or *QIIME Zipped Visualization*.
+You can open them with any unzip utility, such as `unzip` or 7zip.
 
-The contain your data in the normal formats (`.fastq.gz`, `.fasta`, `.biom`, ...), alongside some QIIME 2 specific metadata, like your data's provenance.
-We call these "archives", and you can learn about the archive format [here](https://develop.qiime2.org/en/latest/framework/references/archive-versions.html).
+We call these "archives", and they contain your data in the normal formats (`.fastq.gz`, `.fasta`, `.biom`, ...) alongside some QIIME 2 specific metadata, like your data's provenance.
+You can learn about the archive format [here](https://develop.qiime2.org/en/latest/framework/references/archive-versions.html).
   </FAQItem>
 
   <FAQItem title='How can I get help or become involved with the QIIME 2 community?'>
 The [QIIME 2 Forum](https://forum.qiime2.org) is the primary resource for support and community interaction.
 There you can find announcements, job postings, and technical assistance from a vibrant and active microbiome data science community.
-If you're not a developer and want to get involved in the project, see [*How to get Involved in the QIIME 2 Community*](https://use.qiime2.org/en/latest/how-to-guides/get-involved.html).
-If you are a developer and want to get involved in the project, see [our *Contributing Guide*](https://github.com/qiime2/.github/blob/main/CONTRIBUTING.md)
+
+If you're not a software developer and want to get involved in the project, see [*How to get Involved in the QIIME 2 Community*](https://use.qiime2.org/en/latest/how-to-guides/get-involved.html).
+If you are a developer and want to get involved in the project, see [our *Contributing Guide*](https://github.com/qiime2/.github/blob/main/CONTRIBUTING.md).
   </FAQItem>
 
   <FAQItem title='What do you mean by "AI-Ready"?'>
-We mean that you'll always know how the data you're working with was generated (because of Q2F's data provenance recording), and that the QIIME 2 steps that were performed make logical sense (because of Q2F's Artifact Class system).
+We mean that you'll always know how the QIIME 2 Artifacts that you're working with were generated (because of Q2F's data provenance recording), and that the steps performed to create them made logical sense (because of Q2F's Artifact Class system).
+We now also working on functionality that allows users to sign and add a license to their data, so you'll always know if or how it can be used.
 
 Garbage In, Garbage Out. Artifacts In, Actual Intelligence Out.™️
   </FAQItem>
