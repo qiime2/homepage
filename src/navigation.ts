@@ -77,7 +77,7 @@ export const footerData = {
         { text: 'Library', href: 'https://library.qiime2.org' },
         { text: 'View', href: 'https://view.qiime2.org' },
         { text: 'Forum', href: 'https://forum.qiime2.org' },
-        { text: 'Paper', href: 'https://www.nature.com/articles/s41587-019-0209-9' },
+        { text: 'Citing', href: 'https://doi.org/10.1038/s41587-019-0209-9' },
       ],
     },
     {
@@ -88,7 +88,7 @@ export const footerData = {
         { text: 'Data Resources', href: 'https://library.qiime2.org/data-resources' },
         { text: 'Base Distributions', href: 'https://library.qiime2.org/quickstart' },
         { text: 'Available Plugins', href: 'https://library.qiime2.org/plugins' },
-        { text: '(old user docs)', href: 'https://docs.qiime2.org/2024.10/' },
+        { text: 'Historic User Docs', href: 'https://docs.qiime2.org/2024.10/' },
       ],
     },
     {
