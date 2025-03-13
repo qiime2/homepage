@@ -159,7 +159,8 @@ You can learn about our expectations of community members in the [code of conduc
     classes={{ container: '' }}>
 
   <FAQItem title='How do I pronounce QIIME 2?'>
-QIIME 2 is pronounced "chime two". 🔔
+QIIME 2 is pronounced "chime two". 🔔 It is an AI-ready microbiome multi-omics data science platform that is free, open source, extensible, and community-developed.
+It enables researchers to conduct reproducible microbiome analysis with a variety of interfaces and tools.
   </FAQItem>
 
   <FAQItem title='Is QIIME 2 free to use?'>
@@ -168,7 +169,9 @@ QIIME 2 is completely free and open source, meaning anyone can use, modify, and 
 That includes commercial use.
   </FAQItem>
 
-  <FAQItem title='How do I start using QIIME 2?'>
+  <FAQItem title='Is it difficult to install and use QIIME 2?'>
+Not at all!
+
 * If you have QIIME 2 results and want to interact with them without installing QIIME 2, use [QIIME 2 View](https://view.qiime2.org).
 * If you want to install and use QIIME 2 on your own system, follow the [installation guide](https://docs.qiime2.org/2024.10/install/).
 
@@ -179,20 +182,24 @@ To build and distribute your own plugins, see [*Developing with QIIME 2*](https:
 As of March 2025, we're doing an extensive re-write of our documentation using [JupyterBook](https://jupyterbook.org/en/stable/intro.html) and [Diátaxis](https://diataxis.fr/) to modernize it and to improve organization and accessibility.
   </FAQItem>
 
-  <FAQItem title='Framework? Distributions? Plugins? Huh?'>
-We know it's a little confusing, and we're working on clarifying. 🌳
+  <FAQItem title='Will my data survive the test of time?'>
+Yes, we store all of our data as .zip files, with different file extensions, .qza and .qzv, which mean *QIIME Zipped Artifact* and *QIIME Zipped Visualization*.
+You can open them with any unzip utility, such as `unzip`.
 
-Briefly, *plugins* provide all analytic functionality.
-Groups of plugins that are intended to be used together are shared as *distributions*.
-The *QIIME 2 Framework (Q2F)* provides the general purpose biological data science functionality, like data provenance tracking, and serves as the glue between plugins and the interfaces.
+Additionally, your data will have embedded provenance which means that even without QIIME 2 you will still have precise details on your analysis.
+There is no need to keep a centralized database (or distributed blockchain) online for 20 years, the provenance always lives with your data inside the zip file.
+
+We call these "archives", and they contain your data in the normal formats (`.fastq.gz`, `.fasta`, `.biom`, ...) alongside some QIIME 2 specific metadata (stored as easily interpreted plain-text), like your data's provenance.
+You can learn about the archive format [here](https://develop.qiime2.org/en/latest/framework/explanations/archives.html).
   </FAQItem>
 
-  <FAQItem title='What the heck is a .qza (or .qzv) file?'>
-They're literally just .zip files, with a different file extension that means *QIIME Zipped Artifact* or *QIIME Zipped Visualization*.
-You can open them with any unzip utility, such as `unzip` or 7zip.
 
-We call these "archives", and they contain your data in the normal formats (`.fastq.gz`, `.fasta`, `.biom`, ...) alongside some QIIME 2 specific metadata, like your data's provenance.
-You can learn about the archive format [here](https://develop.qiime2.org/en/latest/framework/explanations/archives.html).
+  <FAQItem title='What makes QIIME 2 extensible - can I customize it to fit my work?'>
+The well engineered architecture of QIIME 2 makes it an extremely modular and customizable tool.
+
+The *QIIME 2 Framework (Q2F)* provides the general purpose data science functionality, like data provenance tracking, and serves as the glue between *plugins* and the many *interfaces*.
+The *plugins* provide all analytic functionality and you can have as many of these as you need.
+Groups of plugins that are intended to be used together are shared as *distributions*, which makes it easy to get started right away.
   </FAQItem>
 
   <FAQItem title='How can I get help or become involved with the QIIME 2 community?'>
