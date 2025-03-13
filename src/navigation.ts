@@ -77,7 +77,7 @@ export const footerData = {
         { text: 'Library', href: 'https://library.qiime2.org' },
         { text: 'View', href: 'https://view.qiime2.org' },
         { text: 'Forum', href: 'https://forum.qiime2.org' },
-        { text: 'Paper', href: 'https://www.nature.com/articles/s41587-019-0209-9' },
+        { text: 'Citing', href: 'https://doi.org/10.1038/s41587-019-0209-9' },
       ],
     },
     {
@@ -88,7 +88,7 @@ export const footerData = {
         { text: 'Data Resources', href: 'https://library.qiime2.org/data-resources' },
         { text: 'Base Distributions', href: 'https://library.qiime2.org/quickstart' },
         { text: 'Available Plugins', href: 'https://library.qiime2.org/plugins' },
-        { text: '(old user docs)', href: 'https://docs.qiime2.org/2024.10/' },
+        { text: 'Historic User Docs', href: 'https://docs.qiime2.org/2024.10/' },
       ],
     },
     {
@@ -125,6 +125,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    Original <a class='underline' href="https://github.com/onwidget/astrowind">template</a> by <a class="underline" href="https://onwidget.com/" target="_blank" rel="noopener noreferrer"> onWidget</a> · All rights reserved.
+    Original <a class='underline' href="https://github.com/onwidget/astrowind">template</a> by <a class="underline" href="https://onwidget.com/" target="_blank" rel="noopener noreferrer"> onWidget</a>. · Site maintained by the <a class="underline" href="https://cap-lab.bio/" target="_blank" rel="noopener noreferrer">Caporaso Lab</a>. · All rights reserved.
   `,
 };
