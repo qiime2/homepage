@@ -11,7 +11,7 @@ metadata:
   title:
     default: QIIME 2 Homepage
     template: '%s'
-  description: "QIIME 2 is an AI-ready **microbiome multi-omics data science** platform"
+  description: "QIIME 2 is an AI-ready microbiome multi-omics data science platform"
   robots:
     index: true
     follow: true
