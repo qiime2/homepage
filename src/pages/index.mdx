@@ -175,6 +175,7 @@ That includes commercial use.
 To learn marker gene (i.e., amplicon) analysis with QIIME 2, see the [amplicon docs](https://amplicon-docs.readthedocs.io).
 To learn metagenome (i.e., shotgun) analysis with QIIME 2, see the [MOSHPIT docs](https://moshpit-docs.readthedocs.io).
 To learn advanced techniques for working with the QIIME 2 Framework, see [*Using QIIME 2*](https://use.qiime2.org).
+To build and distribute your own plugins, see [*Developing with QIIME 2*](https://develop.qiime2.org).
 As of March 2025, we're doing an extensive re-write of our documentation using [JupyterBook](https://jupyterbook.org/en/stable/intro.html) and [Diátaxis](https://diataxis.fr/) to modernize it and to improve organization and accessibility.
   </FAQItem>
 
@@ -183,7 +184,7 @@ They're literally just .zip files, with a different file extension that means *Q
 You can open them with any unzip utility, such as `unzip` or 7zip.
 
 We call these "archives", and they contain your data in the normal formats (`.fastq.gz`, `.fasta`, `.biom`, ...) alongside some QIIME 2 specific metadata, like your data's provenance.
-You can learn about the archive format [here](https://develop.qiime2.org/en/latest/framework/references/archive-versions.html).
+You can learn about the archive format [here](https://develop.qiime2.org/en/latest/framework/explanations/archives.html).
   </FAQItem>
 
   <FAQItem title='How can I get help or become involved with the QIIME 2 community?'>
@@ -196,19 +197,23 @@ If you are a developer and want to get involved in the project, see [our *Contri
 
   <FAQItem title='What do you mean by "AI-Ready"?'>
 We mean that you'll always know how the QIIME 2 Artifacts that you're working with were generated (because of Q2F's data provenance recording), and that the steps performed to create them made logical sense (because of Q2F's Artifact Class system).
-We now also working on functionality that allows users to sign and add a license to their data, so you'll always know if or how it can be used.
+We are now working on functionality that allows users to sign and add a license to their data, so you'll always know if or how it can be used.
 
-Garbage In, Garbage Out. Artifacts In, Actual Intelligence Out.™️
+Garbage In, Garbage Out.
+Artifacts In, Actual Intelligence Out.
   </FAQItem>
 
-  <FAQItem title='Can I develop my own QIIME 2 plugins?'>
-Yes!
-[*Developing with QIIME 2*](https://develop.qiime2.org), a free online book by Evan Bolyen and Greg Caporaso, provides resources for plugin development, including a step-by-step tutorial for building plugins from scratch.
-The QIIME 2 Library is also continuously updated with community contributions, and when you're ready we encourage you to share your plugin there so it can be discovered by others.
+  <FAQItem title='QIIME 2 Framework? Distributions? Plugins? Huh?'>
+We know it's a little confusing, and we're working on clarifying. 🌳
+
+Briefly, *plugins* provide all analytic functionality.
+Groups of plugins that are intended to be used together are shared as *distributions*.
+The *QIIME 2 Framework (Q2F)* provides the general purpose biological data science functionality, like data provenance tracking, and serves as the glue between plugins and the interfaces.
   </FAQItem>
 
   <FAQItem title='Where can I find more QIIME 2 plugins?'>
 The [QIIME 2 Library](https://library.qiime2.org) hosts a variety of plugins and tools developed by the community, expanding QIIME 2’s capabilities beyond its base distributions.
+You can also refer to [*Community Contributions*](https://forum.qiime2.org/c/community-contributions/15) on the QIIME 2 Forum.
   </FAQItem>
 </FAQSection>
 
