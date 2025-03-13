@@ -37,7 +37,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
           {
             socialLinks?.length ? (
-              <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+              <ul class="flex md:order-1 :ml-4 mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
                 {socialLinks.map(({ ariaLabel, href, text, icon }) => (
                   <li>
                     <a

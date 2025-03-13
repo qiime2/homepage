@@ -23,12 +23,14 @@ const WrapperTag = as;
   <div
     class:list={[
       twMerge(
-        'relative mx-auto max-width px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default intersect-once intersect-quarter intercept-no-queue  ',
+        'relative mx-auto px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default intersect-once intersect-quarter intercept-no-queue  ',
         containerClass
       ),
       { dark: isDark },
     ]}
   >
-    <slot />
+    <div class="max-width">
+      <slot />
+    </div>
   </div>
 </WrapperTag>
