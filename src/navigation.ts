@@ -23,18 +23,18 @@ export const headerData = {
           external: true
         },
         {
-          text: 'The Stacks: documentation',
+          text: 'Marker Gene (Amplicon) Analysis',
+          href: 'https://amplicon-docs.qiime2.org',
+          external: true
+        },
+        {
+          text: 'Metagenome Analysis',
+          href: 'https://moshpit.qiime2.org',
+          external: true
+        },
+        {
+          text: 'The Stacks: all documentation',
           href: 'https://library.qiime2.org/docs',
-          external: true
-        },
-        {
-          text: 'Using QIIME 2',
-          href: 'https://use.qiime2.org',
-          external: true
-        },
-        {
-          text: 'Developing with QIIME 2',
-          href: 'https://develop.qiime2.org',
           external: true
         }
       ]
