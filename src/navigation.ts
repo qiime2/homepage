@@ -18,13 +18,13 @@ export const headerData = {
       text: 'Learn',
       links: [
         {
-          text: 'Quickstart',
+          text: 'Quickstart: installation',
           href: 'https://library.qiime2.org/quickstart',
           external: true
         },
         {
-          text: 'Tutorials',
-          href: 'https://library.qiime2.org/books',
+          text: 'The Stacks: documentation',
+          href: 'https://library.qiime2.org/docs',
           external: true
         },
         {
@@ -83,12 +83,12 @@ export const footerData = {
     {
       title: 'Library',
       links: [
-        { text: 'Books', href: 'https://library.qiime2.org/books' },
+        { text: 'Installation', href: 'https://library.qiime2.org/quickstart' },
+        { text: 'Documentation', href: 'https://library.qiime2.org/docs' },
         { text: 'Videos', href: 'https://library.qiime2.org/videos' },
         { text: 'Data Resources', href: 'https://library.qiime2.org/data-resources' },
-        { text: 'Base Distributions', href: 'https://library.qiime2.org/quickstart' },
         { text: 'Available Plugins', href: 'https://library.qiime2.org/plugins' },
-        { text: 'Historic User Docs', href: 'https://docs.qiime2.org/2024.10/' },
+        { text: 'Old User Docs', href: 'https://docs.qiime2.org/2024.10/' },
       ],
     },
     {
@@ -106,7 +106,7 @@ export const footerData = {
       title: 'For Developers',
       links: [
         { text: 'Developing with QIIME 2', href: 'https://develop.qiime2.org/en/latest/' },
-        { text: 'Building a QIIME 2 Plugin', href: 'https://develop.qiime2.org/en/latest/plugins/tutorials/intro.html' },
+        { text: 'Plugin Development Tutorial', href: 'https://develop.qiime2.org/en/latest/plugins/tutorials/intro.html' },
         { text: 'Plugin API', href: 'https://develop.qiime2.org/en/latest/plugins/references/api/intro.html' },
         { text: 'Python SDK', href: 'https://develop.qiime2.org/en/latest/interfaces/references/api.html' },
         { text: 'QZA Internals', href: 'https://develop.qiime2.org/en/latest/framework/explanations/archives.html' },
