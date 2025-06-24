@@ -21,18 +21,33 @@ const distroCollection = defineCollection({
 
 
 const blogLoader = async () => {
-    const response = await fetch("https://forum.qiime2.org/tag/release.json");
-    const group = await response.json();
+    let api_key =  import.meta.env.DISCOURSE_API_KEY
+    let headers = {
+     'Api-Key': api_key,
+     'Api-Username': 'system'
+    }
 
-    let posts = group.topic_list.topics.slice(0, 10).map(async (post, idx) => {
+    const releaseResp = await fetch("https://forum.qiime2.org/tag/release.json", { headers });
+    const newsResp = await fetch("https://forum.qiime2.org/c/miscellaneous-categories/news/38.json", { headers });
+
+    const releases = (await releaseResp.json()).topic_list.topics;
+    const news = (await newsResp.json()).topic_list.topics;
+
+    const ignoreAbouts = [33324]
+    const topics = [...releases, ...news]
+      .filter((topic) => !ignoreAbouts.includes(topic.id))
+      .sort((a, b) => b.created_at.localeCompare(a.created_at))
+
+    let posts = topics.map(async (post, idx) => {
       let postURL = `https://forum.qiime2.org/t/${post.id}.json`
-      let topic = await fetch(postURL);
       // the poor man's waterfall
-      await new Promise(r => setTimeout(r, 200 * idx));
+      await new Promise(r => setTimeout(r, 350 * idx));
+      let topic = await fetch(postURL);
       let data;
+
       try {
         data = await topic.json();
-      } catch { 
+      } catch {
         console.log("Rate limited on: " + postURL)
       }
       let content = data.post_stream.posts[0].cooked
