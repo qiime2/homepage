@@ -44,7 +44,7 @@ export const headerData = {
       links: [
         {
           text: 'Getting Involved',
-          href: 'https://use.qiime2.org/en/latest/how-to-guides/get-involved.html',
+          href: 'https://use.qiime2.org/en/stable/how-to-guides/get-involved.html',
           external: true,
         },
         {
@@ -105,11 +105,11 @@ export const footerData = {
     {
       title: 'For Developers',
       links: [
-        { text: 'Developing with QIIME 2', href: 'https://develop.qiime2.org/en/latest/' },
-        { text: 'Plugin Development Tutorial', href: 'https://develop.qiime2.org/en/latest/plugins/tutorials/intro.html' },
-        { text: 'Plugin API', href: 'https://develop.qiime2.org/en/latest/plugins/references/api/intro.html' },
-        { text: 'Python SDK', href: 'https://develop.qiime2.org/en/latest/interfaces/references/api.html' },
-        { text: 'QZA Internals', href: 'https://develop.qiime2.org/en/latest/framework/explanations/archives.html' },
+        { text: 'Developing with QIIME 2', href: 'https://develop.qiime2.org/en/stable/' },
+        { text: 'Plugin Development Tutorial', href: 'https://develop.qiime2.org/en/stable/plugins/tutorials/intro.html' },
+        { text: 'Plugin API', href: 'https://develop.qiime2.org/en/stable/plugins/references/api/intro.html' },
+        { text: 'Python SDK', href: 'https://develop.qiime2.org/en/stable/interfaces/references/api.html' },
+        { text: 'QZA Internals', href: 'https://develop.qiime2.org/en/stable/framework/explanations/archives.html' },
         { text: 'QIIME 2 GitHub', href: 'https://github.com/qiime2' },
       ],
     },
