@@ -55,7 +55,7 @@ const blogLoader = async () => {
         id: "" + post.id,
         slug: post.slug,
         title: post.title,
-        tags: post.tags,
+        tags: (post.tags || []).map((t) => (typeof t === 'string' ? t : t.slug ?? t.name)),
         publishDate: new Date(post.created_at),
         content
       }
