@@ -10,7 +10,7 @@ const distroCollection = defineCollection({
       ...obj,
       callToAction: {
         variant: 'tertiary',
-        text: 'Get Started',
+        text: 'Install',
         href: 'https://library.qiime2.org/quickstart/' + obj.name,
         target: '_blank',
         icon: 'tabler:external-link',

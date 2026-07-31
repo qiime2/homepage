@@ -18,8 +18,8 @@ export const headerData = {
       text: 'Learn',
       links: [
         {
-          text: 'Quickstart: installation',
-          href: 'https://library.qiime2.org/quickstart',
+          text: 'Install instructions',
+          href: 'https://install.qiime2.org',
           external: true
         },
         {
@@ -66,7 +66,7 @@ export const headerData = {
     }
   ],
   actions: [
-    { text: 'Quickstart', variant: 'primary',  href: 'https://library.qiime2.org/quickstart', target: '_blank' }],
+    { text: 'Install', variant: 'primary',  href: 'https://install.qiime2.org', target: '_blank' }],
 };
 
 export const footerData = {
@@ -83,7 +83,7 @@ export const footerData = {
     {
       title: 'Library',
       links: [
-        { text: 'Installation', href: 'https://library.qiime2.org/quickstart' },
+        { text: 'Installation', href: 'https://install.qiime2.org' },
         { text: 'Documentation', href: 'https://library.qiime2.org/docs' },
         { text: 'Videos', href: 'https://library.qiime2.org/videos' },
         { text: 'Data Resources', href: 'https://library.qiime2.org/data-resources' },
