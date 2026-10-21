@@ -12,6 +12,12 @@ export default {
             a: {
               color: "var(--color-blue-700)",
             },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
           }
         }
       }),

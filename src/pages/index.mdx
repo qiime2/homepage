@@ -67,8 +67,8 @@ QIIME 2 is a **microbiome multi-omics data science** platform
 [Trusted](https://scholar.google.com/scholar?hl=en&as_sdt=805&sciodt=0,3&cites=6935821321202015575,17795719731389093288,9078996940723452772,6129633569390757233,261340794755367594,16903127068530972426&scipsc=&q=&scisbd=1_),
 [free](https://github.com/qiime2/qiime2/blob/dev/LICENSE),
 [open source](https://github.com/qiime2),
-[extensible](https://develop.qiime2.org),
-and [community developed](https://library.qiime2.org)
+[extensible](https://develop.rachis.org),
+and [community developed](https://library.rachis.org)
 and [supported](https://forum.qiime2.org/g/q2-mods) bioinformatics.
 
   </Fragment>
@@ -105,7 +105,7 @@ and [supported](https://forum.qiime2.org/g/q2-mods) bioinformatics.
   id="/features"
   tagline="Features"
   title="Our users love these features"
-  subtitle="The QIIME 2 Framework (Q2F) empowers researchers to conduct reproducible biological data science through a variety of interfaces and using diverse methods.">
+  subtitle="QIIME 2 empowers researchers to conduct reproducible biological data science through a variety of interfaces and using diverse methods.">
 
   <FeatureItem title='Latest Methods' icon='tabler:microscope'>
 QIIME 2 integrates dozens of plugins and hundreds of bioinformatics methods, allowing users to perform cutting-edge microbiome analysis with interactive visualizations and robust statistical tools.
@@ -123,14 +123,14 @@ Regardless of your computational background, QIIME 2 has an interface that will 
   </FeatureItem>
 
   <FeatureItem title='Extensible' icon='tabler:hexagon-plus'>
-Q2F is plugin-based, making it straight-forward to extend and customize the platform.
+`rachis`, the framework on which QIIME 2 is built, is plugin-based, making it straight-forward to extend and customize the platform.
 Developers can integrate their bioinformatics methods, leveraging an extensive library of existing functionality and leaving the interfaces and provenance recording to the framework.
   </FeatureItem>
 
   <FeatureItem title='Accessible' icon='tabler:book-2'>
 QIIME 2 is designed to be accessible to all users, from students to seasoned researchers.
 It provides simplified workflows, comprehensive tutorials, and clear documentation to streamline microbiome analysis.
-Visit the [QIIME 2 Library](https://library.qiime2.org) for guides, tutorials, and reference materials.
+Visit the [rachis-library](https://library.rachis.org) for guides, tutorials, and reference materials.
   </FeatureItem>
 
   <FeatureItem title='Open Source Community' icon='tabler:users'>
@@ -144,7 +144,7 @@ You can learn about our expectations of community members in the [code of conduc
 <Features2
     tagline="Distributions"
     title="Multi-Omics"
-    subtitle="The QIIME 2 Framework supports expanding -omics data types through specialized distributions."
+    subtitle="<a href='https://rachis.org'><code>rachis</code></a>, the framework on which QIIME 2 is built, supports expanding -omics data types through specialized distributions."
     items={distros}>
   <Fragment slot="bg">
     <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -173,14 +173,13 @@ That includes commercial use.
   <FAQItem title='Is it difficult to install and use QIIME 2?'>
 Not at all!
 
-* If you have QIIME 2 results and want to interact with them without installing QIIME 2, use [QIIME 2 View](https://view.qiime2.org).
-* If you want to install and use QIIME 2 on your own system, follow the [installation guide](https://library.qiime2.org/quickstart).
+* If you have QIIME 2 results and want to interact with them without installing QIIME 2, use [rachis-view](https://view.rachis.org).
+* If you want to install and use QIIME 2 on your own system, follow the [installation guide](https://library.rachis.org/quickstart).
 
-To learn marker gene (i.e., amplicon) analysis with QIIME 2, see the [amplicon docs](https://amplicon-docs.readthedocs.io).
-To learn metagenome (i.e., shotgun) analysis with QIIME 2, see the [MOSHPIT docs](https://moshpit-docs.readthedocs.io).
-To learn advanced techniques for working with the QIIME 2 Framework, see [*Using QIIME 2*](https://use.qiime2.org).
-To build and distribute your own plugins, see [*Developing with QIIME 2*](https://develop.qiime2.org).
-As of March 2025, we're doing an extensive re-write of our documentation using [JupyterBook](https://jupyterbook.org/en/stable/intro.html) and [Diátaxis](https://diataxis.fr/) to modernize it and to improve organization and accessibility.
+To learn marker gene (i.e., amplicon) analysis with QIIME 2, see the [amplicon docs](https://docs.qiime2.org).
+To learn metagenome (i.e., shotgun) analysis with QIIME 2, see the [MOSHPIT docs](https://moshpit.qiime2.org).
+To learn advanced techniques for working with `rachis`, the framework on which QIIME 2 is built, see [*Using `rachis`*](https://use.rachis.org).
+To build and distribute your own plugins, see [*Developing with `rachis`*](https://develop.rachis.org).
   </FAQItem>
 
   <FAQItem title='Will my data survive the test of time?'>
@@ -192,27 +191,37 @@ You can open them with any unzip utility, such as `unzip`.
 We call these "archives", and they contain your data in the normal formats (`.fastq.gz`, `.fasta`, `.biom`, ...).
 Additionally, these archives have embedded provenance which means that even without QIIME 2 you will still have precise details on how the data was generated.
 There is no need to keep a centralized database (or distributed blockchain) online for 20 years: the provenance always lives with your data inside the zip file.
-You can learn about the archive format [here](https://develop.qiime2.org/en/stable/framework/explanations/archives.html).
+You can learn about the archive format [here](https://develop.rachis.org/en/stable/framework/explanations/archives.html).
   </FAQItem>
 
   <FAQItem title='What makes QIIME 2 extensible? Can I customize it to fit my work?'>
 The professionally engineered architecture of QIIME 2 makes it an extremely modular and customizable tool.
 
-The *QIIME 2 Framework (Q2F)* provides the general purpose data science functionality, like data provenance tracking, and serves as the glue between *plugins* and the many *interfaces*.
+The *[`rachis`](https://rachis.org) framework* provides the general purpose data science functionality, like data provenance tracking, and serves as the glue between *plugins* and the many *interfaces*.
 The *plugins* provide all analytic functionality, and you can have as many of these as you need.
 Groups of plugins that are intended to be used together are shared as *distributions*, which makes it easy to get started right away with the most common workflows.
+  </FAQItem>
+
+  <FAQItem title='What is rachis?'>
+QIIME 2 is built on [`rachis`](https://rachis.org) (pronounced ray-kiss), which was formerly called the QIIME 2 Framework (Q2F).
+`rachis` provides the general purpose functionality that gives QIIME 2 a lot of its power, including data provenance tracking, the Python API, the artifact class system, the parallel computing framework, the artifact cache, and more.
+`rachis` also serves as the foundation for [MOSHPIT](https://moshpit.qiime2.org), as well as pathogen genomics tools in our pathogenome distribution, and stand-alone tools like [genome-sampler](https://genome-sampler.readthedocs.io).
+
+As a user, you do not directly interact with `rachis` itself but benefit from the centralized, general features, and enhanced accessibility that it provides.
+
+To learn more, see [*Announcing `rachis`, a rebrand of the QIIME 2 Framework (Q2F)*](https://news.rachis.org/en/latest/2025-10-23-q2f-transition/).
   </FAQItem>
 
   <FAQItem title='How can I get help or become involved with the QIIME 2 community?'>
 The [QIIME 2 Forum](https://forum.qiime2.org) is the primary resource for support and community interaction.
 There you can find announcements, job postings, and technical assistance from a vibrant and active microbiome data science community.
 
-If you're not a software developer and want to get involved in the project, see [*How to Get Involved in the QIIME 2 Community*](https://use.qiime2.org/en/stable/how-to-guides/get-involved.html).
+If you're not a software developer and want to get involved in the project, see [*How to Get Involved in the QIIME 2 Community*](https://use.rachis.org/en/stable/how-to-guides/get-involved.html).
 If you are a developer and want to get involved in the project, see [our *Contributing Guide*](https://github.com/qiime2/.github/blob/main/CONTRIBUTING.md).
   </FAQItem>
 
   <FAQItem title='How does QIIME 2 faciliate trust in bioinformatics workflows?'>
-You'll always know how the QIIME 2 Artifacts that you're working with were generated (because of Q2F's data provenance recording), and that the steps performed to create them made logical sense (because of Q2F's Artifact Class system) - even if an AI tool builds and runs the workflow, you can inspect your Results to see exactly what it did.
+You'll always know how the QIIME 2 Artifacts that you're working with were generated (because of [`rachis`](https://rachis.org)'s data provenance recording), and that the steps performed to create them made logical sense (because of `rachis`'s Artifact Class system) - even if an AI tool builds and runs the workflow, you can inspect your Results to see exactly what it did.
 Additionally, users can cryptographically sign and add a license to their data, so you'll always know if or how it can be used.
 
 Garbage In, Garbage Out.
@@ -220,7 +229,7 @@ Artifacts In, Actual Intelligence Out.
   </FAQItem>
 
   <FAQItem title='Where can I find more QIIME 2 plugins?'>
-The [QIIME 2 Library](https://library.qiime2.org) hosts a variety of plugins and tools developed by the community, expanding QIIME 2’s capabilities beyond its base distributions.
+The [rachis-library](https://library.rachis.org) hosts a variety of plugins and tools developed by the community, expanding QIIME 2’s capabilities beyond its base distributions.
 You can also refer to [*Community Contributions*](https://forum.qiime2.org/c/community-contributions/15) on the QIIME 2 Forum.
   </FAQItem>
 </FAQSection>
