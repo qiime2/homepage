@@ -34,7 +34,7 @@ export const headerData = {
         },
         {
           text: 'The Stacks: all documentation',
-          href: 'https://library.qiime2.org/docs',
+          href: 'https://library.rachis.org/docs',
           external: true
         }
       ]
@@ -44,7 +44,7 @@ export const headerData = {
       links: [
         {
           text: 'Getting Involved',
-          href: 'https://use.qiime2.org/en/stable/how-to-guides/get-involved.html',
+          href: 'https://use.rachis.org/en/stable/how-to-guides/get-involved.html',
           external: true,
         },
         {
@@ -54,7 +54,7 @@ export const headerData = {
         },
         {
           text: 'Library',
-          href: 'https://library.qiime2.org',
+          href: 'https://library.rachis.org',
           external: true,
         },
         {
@@ -74,8 +74,8 @@ export const footerData = {
     {
       title: 'QIIME 2',
       links: [
-        { text: 'Library', href: 'https://library.qiime2.org' },
-        { text: 'View', href: 'https://view.qiime2.org' },
+        { text: 'Library', href: 'https://library.rachis.org' },
+        { text: 'View', href: 'https://view.rachis.org' },
         { text: 'Forum', href: 'https://forum.qiime2.org' },
         { text: 'Citing', href: 'https://doi.org/10.1038/s41587-019-0209-9' },
       ],
@@ -84,11 +84,10 @@ export const footerData = {
       title: 'Library',
       links: [
         { text: 'Installation', href: 'https://install.qiime2.org' },
-        { text: 'Documentation', href: 'https://library.qiime2.org/docs' },
-        { text: 'Videos', href: 'https://library.qiime2.org/videos' },
-        { text: 'Data Resources', href: 'https://library.qiime2.org/data-resources' },
-        { text: 'Available Plugins', href: 'https://library.qiime2.org/plugins' },
-        { text: 'Old User Docs', href: 'https://docs.qiime2.org/2024.10/' },
+        { text: 'Documentation', href: 'https://docs.qiime2.org' },
+        { text: 'Videos', href: 'https://library.rachis.org/videos' },
+        { text: 'Data Resources', href: 'https://library.rachis.org/data-resources' },
+        { text: 'Available Plugins', href: 'https://library.rachis.org/plugins' },
       ],
     },
     {
@@ -105,11 +104,11 @@ export const footerData = {
     {
       title: 'For Developers',
       links: [
-        { text: 'Developing with QIIME 2', href: 'https://develop.qiime2.org/en/stable/' },
-        { text: 'Plugin Development Tutorial', href: 'https://develop.qiime2.org/en/stable/plugins/tutorials/intro.html' },
-        { text: 'Plugin API', href: 'https://develop.qiime2.org/en/stable/plugins/references/api/intro.html' },
-        { text: 'Python SDK', href: 'https://develop.qiime2.org/en/stable/interfaces/references/api.html' },
-        { text: 'QZA Internals', href: 'https://develop.qiime2.org/en/stable/framework/explanations/archives.html' },
+        { text: 'Developing with rachis', href: 'https://develop.rachis.org/en/stable/' },
+        { text: 'Plugin Development Tutorial', href: 'https://develop.rachis.org/en/stable/plugins/tutorials/intro.html' },
+        { text: 'Plugin API', href: 'https://develop.rachis.org/en/stable/plugins/references/api/intro.html' },
+        { text: 'Python SDK', href: 'https://develop.rachis.org/en/stable/interfaces/references/api.html' },
+        { text: 'QZA Internals', href: 'https://develop.rachis.org/en/stable/framework/explanations/archives.html' },
         { text: 'QIIME 2 GitHub', href: 'https://github.com/qiime2' },
       ],
     },

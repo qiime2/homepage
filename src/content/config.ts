@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 
 const distroCollection = defineCollection({
   loader: async () => {
-    const response = await fetch("https://library.qiime2.org/json/distros.json");
+    const response = await fetch("https://library.rachis.org/json/distros.json");
     const data = await response.json();
     return data.distros.map((obj) => ({
       id: obj.name,
@@ -11,7 +11,7 @@ const distroCollection = defineCollection({
       callToAction: {
         variant: 'tertiary',
         text: 'Install',
-        href: 'https://library.qiime2.org/quickstart/' + obj.name,
+        href: 'https://library.rachis.org/quickstart/' + obj.name,
         target: '_blank',
         icon: 'tabler:external-link',
       }
@@ -22,10 +22,11 @@ const distroCollection = defineCollection({
 
 const blogLoader = async () => {
     let api_key =  import.meta.env.DISCOURSE_API_KEY
-    let headers = {
+    // without a key (e.g. local builds) request the public endpoints anonymously
+    let headers = api_key ? {
      'Api-Key': api_key,
      'Api-Username': 'system'
-    }
+    } : {}
 
     const releaseResp = await fetch("https://forum.qiime2.org/tag/release.json", { headers });
     const newsResp = await fetch("https://forum.qiime2.org/c/miscellaneous-categories/news/38.json", { headers });
